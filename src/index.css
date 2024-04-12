@@ -1,0 +1,230 @@
+nav {
+    width: 100%;
+    height: 75px;
+    background-color: #fff;
+    color: rgb(179, 176, 176);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+nav #logo {
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(112, 111, 111);
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu li a:hover {
+    color: rgb(228, 64, 176);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.search form {
+    display: flex;
+    margin: 0;
+}
+
+.search input {
+    width: 52%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1px;
+    font-size: 16px;
+    background: rgba(237, 237, 237, 0.905);
+    color: rgb(159, 157, 157);  
+}
+
+.search img {
+    width: 15%;
+    padding: 10px;
+}
+
+.search button {
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(232, 45, 148);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+}
+
+.heading {
+    font-size: 25px;
+    /* position: fixed;sb me se  */
+    margin: 10% 36%;
+}
+
+.heading h2 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading p {
+    margin-top: 20px;
+}
+
+.heading img {
+    font-size: 20px;
+    margin: 4% 30%;
+}
+
+.heading p {
+    font-size: 17px;
+    margin: 1% -12%;
+    color: rgb(48, 47, 47);
+    font-weight: lighter;
+}
+
+.heading h4 {
+    font-size: 17px;
+    margin: 5% 28%;
+}
+
+.heading .para1 p {
+    font-size: 17px;
+    margin: 1% -2%;
+    color: rgb(48, 47, 47);
+    font-weight: lighter;
+}
+
+.heading .para2 p {
+    font-size: 17px;
+    margin: 5% -27%;
+    color: rgb(48, 47, 47);
+    font-weight: lighter;
+}
+
+.heading .para3 p {
+    font-size: 17px;
+    margin: -4% -3%;
+    color: rgb(48, 47, 47);
+    font-weight: lighter;
+}
+
+.heading .para3 span {
+    color:  rgb(232, 45, 148);
+}
+
+.heading .para4 p {
+    font-size: 17px;
+    margin: 9% 20%;
+    color: rgb(48, 47, 47);
+    font-weight: lighter;
+}
+
+.heading .para4 span {
+    color:  rgb(232, 45, 148);
+}
+
+section {
+    padding: 80px 5% 70px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-content img {
+    width: 40%;
+    height: 10%;
+}
+
+.footer-content h4 {
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-content li {
+    margin-bottom: 16px;
+}
+
+.footer-content li a {
+    display: block;
+    color: #393838;;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .40s ease;
+    text-decoration: none;
+}
+
+.footer-content li a:hover {
+    transform: translateY(-5px);
+    color: #e12d90;
+}
+
+.footer-content p {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0;
+}
+
+.icons a {
+    display: inline-block;
+    font-size: 20px;
+    color: #393838;
+    margin-right: 15px;
+    transition: all .40s ease;
+}
+
+.icons a:hover{
+    color: #e12d90;
+    transform: translateY(-5px);;
+}
+
+.left {
+    width: 100%;
+    display: flex;
+    color: rgb(94, 92, 92);
+    font-size: 15px;
+    gap: 0.2rem;
+}
+.right {
+    text-align: right;
+    font-size: 15px;
+}
+.right  img {
+    width: 10%;
+    height: 5%;
+    margin: 10% 20%;
+}
