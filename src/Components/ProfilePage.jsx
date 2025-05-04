@@ -12,11 +12,15 @@ function ProfilePage() {
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
-    setFileImage(URL.createObjectURL(e.target.files[0]));
+    /* This will remove the current URL from image tag as well if user opens file selection window but doesn't selects anything
+    # This is the best way to tell user that he should select a file in order to move further. */
+    setFileImage(
+      e?.target?.files[0] ? URL.createObjectURL(e?.target?.files[0]) : ""
+    );
   };
 
   useEffect(() => {
-    setBtnDisabled(!(fileImage.length !== 0 && location.length !== 0));
+    setBtnDisabled(!(fileImage?.length !== 0 && location.length !== 0));
   }, [fileImage, location]);
 
   return (
@@ -110,8 +114,13 @@ function ProfilePage() {
           required
         />
       </div>
-      <div className="flex flex-col items-center gap-2 w-fit">
-        <ButtonComp extraInfo={!btnDisabled} otherProps={{ disabled: btnDisabled }}>Next</ButtonComp>
+      <div className="flex flex-col items-center gap-2 w-fit sm:w-full">
+        <ButtonComp
+          extraInfo={!btnDisabled}
+          otherProps={{ disabled: btnDisabled }}
+        >
+          Next
+        </ButtonComp>
       </div>
     </SectionContainer>
   );
@@ -150,7 +159,10 @@ export const SectionContainer = ({
         elementBeforeLogo={elementBeforeLogo}
         elementAfterLogo={elementAfterLogo}
       />
-      <form onSubmit={onSubmit} className={`w-3/5 self-center md:w-full ${formClassName}`}>
+      <form
+        onSubmit={onSubmit}
+        className={`w-3/5 self-center md:w-full ${formClassName}`}
+      >
         <div className="heading mb-11 text-[20px]">
           <h1
             className={`text-3xl mb-3 font-bold font-['Franklin_Gothic_Medium',_'Arial_Narrow',_Arial,_sans-serif] ${h1ClassName}`}

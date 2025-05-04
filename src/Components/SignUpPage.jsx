@@ -54,7 +54,7 @@ function SignUpPage() {
             </ul>
           )}
           <form onSubmit={() => navigate("/profile")}>
-            <div className={`flex gap-4 ${marginClass}`}>
+            <div className={`flex gap-4 md:flex-col ${marginClass}`}>
               <div>
                 <label
                   htmlFor="name"
